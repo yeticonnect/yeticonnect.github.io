@@ -6,7 +6,10 @@
   <link rel="stylesheet" href="/styles.css">
   <title>Yeti Connect — Managed Services & Cloud Consulting</title>
   <meta name="description" content="Full-stack managed IT for small & medium businesses — cloud consulting & migration, managed IT, business phone systems, backup & disaster recovery, SharePoint, Power Platform, software & web development, Power BI, IT procurement and staff solutions.">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./script.js"></script>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -25,69 +28,99 @@
     </header>
 
     <section class="hero" id="hero">
-      <div style="flex:1">
+      <!-- Particle background -->
+      <div id="particles-js"></div>
+
+
+      <img src="images/yeti-laptop.png">
+      <!-- Hero content -->
+      <div class="hero-content">
         <div class="tag">Managed Services • Cloud • Automation</div>
-        <h1>Reliable IT that moves your business forward</h1>
-        <p class="muted">We provide end-to-end managed IT, cloud strategy & migrations, voice systems and custom development so your team can focus on growth — not firefighting.</p>
+        <h1 class="inverted-text">Reliable IT that moves your business forward</h1>
+        <p>
+          We provide end-to-end managed IT, cloud strategy & migrations, voice systems and custom development so your team can focus on growth — not firefighting.
+        </p>
         <div style="margin-top:16px">
           <a class="btn" href="#contact">Request a Free Assessment</a>
-          <a style="margin-left:12px;color:var(--accent);font-weight:700;text-decoration:none" href="#services">Explore Services →</a>
-        </div>
-      </div>
-      <div style="width:320px">
-        <div style="background:linear-gradient(180deg,#eef8ff, #fff);padding:18px;border-radius:10px">
-          <strong>Starter assessment</strong>
-          <p class="muted" style="margin-top:8px">30‑minute call — infrastructure review, security snapshot & migration roadmap.</p>
-          <div style="margin-top:12px"><a class="btn" href="#contact">Book Now</a></div>
+          <a style="margin-left:12px;color:var(--accent);font-weight:700;text-decoration:none" href="#services">
+            Explore Services →
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="services" style="margin-top:26px">
-      <h2>Our Services</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Cloud Consulting & Migration</h3>
-          <p class="muted">Strategy, cost modelling, migration to Azure/AWS/Microsoft 365 and ongoing cloud operations. Lift & shift, refactor, or re-platform depending on your goals.</p>
-        </div>
-        <div class="card">
-          <h3>Managed IT Services</h3>
-          <p class="muted">24/7 device & network monitoring, patching, endpoint management and proactive maintenance to reduce downtime and risk.</p>
-        </div>
-        <div class="card">
-          <h3>Office & Business Phone Systems</h3>
-          <p class="muted">VoIP phone systems, SIP trunking, conference bridge, call routing and mobile integration to keep teams connected.</p>
-        </div>
-        <div class="card">
-          <h3>Backup & Disaster Recovery</h3>
-          <p class="muted">Automated backups, replication, and tested recovery plans — RTO/RPO tuning for critical systems and data.</p>
-        </div>
-        <div class="card">
-          <h3>SharePoint Development</h3>
-          <p class="muted">Intranet portals, document automation, custom web parts and migration to SharePoint Online to modernize collaboration.</p>
-        </div>
-        <div class="card">
-          <h3>Power Apps & Automation</h3>
-          <p class="muted">Low-code apps, Power Automate workflows and connectors to streamline business processes and reduce manual work.</p>
-        </div>
-        <div class="card">
-          <h3>Software & Web Development</h3>
-          <p class="muted">Custom back-end systems, web apps, integrations and responsive websites built for scale and maintainability.</p>
-        </div>
-        <div class="card">
-          <h3>Power BI & Reporting</h3>
-          <p class="muted">Self-service reports, dashboards and data models that turn operational data into business insights.</p>
-        </div>
-        <div class="card">
-          <h3>IT Procurement</h3>
-          <p class="muted">Hardware & software sourcing, licensing management and vendor negotiation to lower TCO and simplify purchasing.</p>
-        </div>
-        <div class="card">
-          <h3>IT Support & Staff Solutions</h3>
-          <p class="muted">Flexible resourcing: remote helpdesk, onsite engineers, project staff augmentation and managed staffing plans.</p>
+    <section id="services" class="services">
+      <div class="services-inner">
+        <h2 class="reveal">Our Services</h2>
+
+        <div class="grid">
+          <div class="card reveal">
+            <div class="icon">
+              <!-- Cloud Icon -->
+              <svg viewBox="0 0 24 24" class="icon-svg">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+              </svg>
+            </div>
+            <h3>Cloud Consulting & Migration</h3>
+            <p class="muted">Strategy, cost modelling, migration to Azure/AWS/Microsoft 365 and ongoing cloud operations.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" class="icon-svg">
+                <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+
+            <h3>Managed IT Services</h3>
+            <p class="muted">24/7 device & network monitoring, patching and proactive maintenance.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="" class="icon-svg">
+                <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+
+            <h3>Office & Business Phone Systems</h3>
+            <p class="muted">VoIP phone systems, SIP trunking, call routing and mobile integration.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="" class="icon-svg">
+                <polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline>
+              </svg>
+            </div>
+            <h3>Backup & Disaster Recovery</h3>
+            <p class="muted">Automated backups, replication and tested recovery plans.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="" class="icon-svg">
+                <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"></path><path d="M13 13l6 6"></path>
+              </svg>
+            </div>
+            <h3>SharePoint Development</h3>
+            <p class="muted">Intranet portals, document automation and SharePoint Online migrations.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="" class="icon-svg">
+                <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <h3>Power Apps & Automation</h3>
+            <p class="muted">Low-code apps and Power Automate workflows.</p>
+          </div>
         </div>
       </div>
     </section>
+
+
 
     <section id="offerings" style="margin-top:28px">
       <h2>Core Offerings</h2>
@@ -167,10 +200,7 @@
     </section>
 
     <footer>
-      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
-        <div>© <strong>Horizon IT</strong> — Managed Services & Cloud</div>
-        <div style="color:var(--muted)">Privacy • Terms • Modern IT for modern teams</div>
-      </div>
+      <div>© <strong>Horizon IT</strong> — Managed Services & Cloud</div>
     </footer>
   </div>
 </body>

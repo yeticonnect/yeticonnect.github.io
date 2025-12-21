@@ -1,94 +1,208 @@
 :root {
-    --accent: #0b76ef;
+    --accent: #f7f8fb;
     --muted: #6b7280;
-    --bg: #f7f8fb
+    --bg: #f7f8fb;
+    --text-color: #222222;
+    --dark-gray: #333333;
 }
 
 body {
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     line-height: 1.5;
-    color: #111;
-    background: var(--bg);
-    margin: 0
+    margin: 0;
 }
 
 .container {
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 28px
+    align-self: center;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0
+    padding: 12px;
+    position: absolute; /* Overlay the menu on top of the hero */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Ensures the menu stays above hero */
 }
 
 nav a {
     margin-left: 16px;
-    color: #0f172a;
+    color: var(--text-color);
     text-decoration: none;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .hero {
-    background: #fff;
-    padding: 48px;
-    border-radius: 14px;
-    box-shadow: 0 6px 30px rgba(10, 15, 25, 0.06);
+    position: relative;
+    width:  100vw;  /* Ensure full viewport width */
+    height: 100vh; /* Ensure full viewport height */
     display: flex;
-    gap: 32px;
-    align-items: center
+    justify-content: center;
+    align-items: center;
+    padding-left: 48px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #D8B5FF, #1EAE98);  
+    background-size: 150% 150%; /* Stretch the gradient beyond the bounds */ 
+    animation: moveGradient 20s ease infinite; /* Animate background position *//* Gradient from blue to light blue */
+}
+
+/* Particle canvas */
+/* #particles-js {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: transparent;  /* Transparent so the gradient can be visible */
+/* } */ */
+
+/* Content stays on top */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    max-width: 800px;
 }
 
 .hero h1 {
-    font-size: 28px;
-    margin: 0
+    font-size: 3rem;
+    margin: 0;
+    color: white;
 }
 
-.tag {
-    color: var(--accent);
-    font-weight: 700
+.inverted-text {
+    color: white;
+    mix-blend-mode: difference;
 }
 
+.hero p {
+    color: var(--dark-gray);  /* Lighter text for contrast */
+    margin-bottom: 24px;
+}
+
+/* Button styling */
 .btn {
     background: var(--accent);
-    color: #fff;
+    color: var(--dark-gray);
     padding: 12px 18px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
-    display: inline-block
+    display: inline-block;
+    margin-top: 16px;
 }
 
+.services {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+}
+
+.services-inner {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center; /* centers title */
+}
+
+.services h2 {
+  margin-bottom: 3rem;
+}
+
+/* Grid centered */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-    margin-top: 20px
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 5.75rem;
+  justify-items: center; /* centers cards */
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  padding: 1.75rem;
+  border-radius: 14px;
+  text-align: left;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* 🔥 Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1rem;
+}
+
+.icon-svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #2563eb;
+  stroke-width: 1.0;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  transition: transform 0.4s ease;
+}
+
+/* Reveal animation triggers SVG draw */
+.reveal.active .icon-svg {
+  animation: draw-line 1.1s ease forwards;
+}
+
+/* Hover micro-interaction */
+.card:hover .icon-svg {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* SVG draw animation */
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .card {
-    background: #fff;
-    padding: 18px;
-    border-radius: 10px;
-    box-shadow: 0 4px 18px rgba(12, 20, 30, 0.04)
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: left;
 }
 
+
 h3 {
-    margin: 0 0 10px 0
+    margin: 0 0 10px 0;
 }
 
 p.muted {
     color: var(--muted);
-    margin: 0
+    margin: 0;
 }
 
 .features {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px
+    gap: 12px;
 }
 
 .feature {
@@ -96,19 +210,35 @@ p.muted {
     padding: 8px 12px;
     border-radius: 20px;
     font-weight: 600;
-    color: var(--accent)
+    color: var(--accent);
 }
 
 footer {
     margin-top: 28px;
     padding: 24px 0;
     color: var(--muted);
-    font-size: 14px
+    font-size: 14px;
 }
 
-@media(max-width:720px) {
+@media(max-width: 720px) {
     .hero {
         flex-direction: column;
-        align-items: flex-start
+        align-items: flex-start;
+    }
+
+    header {
+        padding: 12px;
+    }
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
