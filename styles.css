@@ -22,11 +22,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 12px;
-    position: absolute; /* Overlay the menu on top of the hero */
+    position: absolute;
+    /* Overlay the menu on top of the hero */
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10; /* Ensures the menu stays above hero */
+    z-index: 10;
+    /* Ensures the menu stays above hero */
 }
 
 nav a {
@@ -38,16 +40,21 @@ nav a {
 
 .hero {
     position: relative;
-    width:  100vw;  /* Ensure full viewport width */
-    height: 100vh; /* Ensure full viewport height */
+    width: 100vw;
+    /* Ensure full viewport width */
+    height: 100vh;
+    /* Ensure full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 48px;
     overflow: hidden;
-    background: linear-gradient(135deg, #D8B5FF, #1EAE98);  
-    background-size: 150% 150%; /* Stretch the gradient beyond the bounds */ 
-    animation: moveGradient 20s ease infinite; /* Animate background position *//* Gradient from blue to light blue */
+    background: linear-gradient(135deg, #D8B5FF, #1EAE98);
+    background-size: 150% 150%;
+    /* Stretch the gradient beyond the bounds */
+    animation: moveGradient 20s ease infinite;
+    /* Animate background position */
+    /* Gradient from blue to light blue */
 }
 
 /* Particle canvas */
@@ -56,7 +63,8 @@ nav a {
     inset: 0;
     z-index: 0;
     background: transparent;  /* Transparent so the gradient can be visible */
-/* } */ */
+/* } */
+*/
 
 /* Content stays on top */
 .hero-content {
@@ -79,7 +87,8 @@ nav a {
 }
 
 .hero p {
-    color: var(--dark-gray);  /* Lighter text for contrast */
+    color: var(--dark-gray);
+    /* Lighter text for contrast */
     margin-bottom: 24px;
 }
 
@@ -96,97 +105,100 @@ nav a {
 }
 
 .services {
-  min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 1.5rem;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
 }
 
 .services-inner {
-  max-width: 1200px;
-  width: 100%;
-  text-align: center; /* centers title */
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    /* centers title */
 }
 
 .services h2 {
-  margin-bottom: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 6rem;
 }
 
 /* Grid centered */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 5.75rem;
-  justify-items: center; /* centers cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 5.75rem;
+    justify-items: center;
+    /* centers cards */
 }
 
 /* Card styling */
 .card {
-  background: #fff;
-  padding: 1.75rem;
-  border-radius: 14px;
-  text-align: left;
-  width: 100%;
-  max-width: 360px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background: #fff;
+    padding: 1.75rem;
+    border-radius: 14px;
+    text-align: left;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* 🔥 Reveal Animation */
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .icon {
-  width: 56px;
-  height: 56px;
-  margin-bottom: 1rem;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
 }
 
 .icon-svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: #2563eb;
-  stroke-width: 1.0;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #2563eb;
+    stroke-width: 1.0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  transition: transform 0.4s ease;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    transition: transform 0.4s ease;
 }
 
 /* Reveal animation triggers SVG draw */
 .reveal.active .icon-svg {
-  animation: draw-line 1.1s ease forwards;
+    animation: draw-line 1.1s ease forwards;
 }
 
 /* Hover micro-interaction */
 .card:hover .icon-svg {
-  transform: scale(1.1) rotate(-2deg);
+    transform: scale(1.1) rotate(-2deg);
 }
 
 /* SVG draw animation */
 @keyframes draw-line {
-  to {
-    stroke-dashoffset: 0;
-  }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 .card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  text-align: left;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
 }
 
 
@@ -235,9 +247,11 @@ footer {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
