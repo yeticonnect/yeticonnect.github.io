@@ -62,9 +62,8 @@ nav a {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: transparent;  /* Transparent so the gradient can be visible */
-/* } */
-*/
+    background: transparent;
+} */
 
 /* Content stays on top */
 .hero-content {
@@ -105,7 +104,6 @@ nav a {
 }
 
 .services {
-    min-height: 100vh;
     min-width: 100vw;
     display: flex;
     align-items: center;
@@ -114,14 +112,17 @@ nav a {
 }
 
 .services-inner {
-    max-width: 1200px;
+    max-width: 1100px;
     width: 100%;
     text-align: center;
     /* centers title */
 }
 
-.services h2 {
+h2 {
     font-size: 2.5rem;
+}
+
+.services {
     margin-bottom: 6rem;
 }
 
@@ -137,7 +138,7 @@ nav a {
 /* Card styling */
 .card {
     background: #fff;
-    padding: 1.75rem;
+    padding: 1.90rem;
     border-radius: 14px;
     text-align: left;
     width: 100%;
@@ -158,8 +159,8 @@ nav a {
 }
 
 .icon {
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 1rem;
 }
 
@@ -194,14 +195,6 @@ nav a {
     }
 }
 
-.card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    text-align: left;
-}
-
-
 h3 {
     margin: 0 0 10px 0;
 }
@@ -223,6 +216,45 @@ p.muted {
     border-radius: 20px;
     font-weight: 600;
     color: var(--accent);
+}
+
+.contact {
+    background-color: #d7dbe3;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-inner {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+    margin: 5rem 0rem;
+}
+
+.contact-form {
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    min-width: 700px;
+}
+
+.typing {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
 }
 
 footer {

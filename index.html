@@ -28,15 +28,13 @@
     </header>
 
     <section class="hero" id="hero">
-      <!-- Particle background -->
-      <div id="particles-js"></div>
-
-
       <img src="images/yeti-laptop.png">
       <!-- Hero content -->
       <div class="hero-content">
         <div class="tag">Managed Services • Cloud • Automation</div>
-        <h1 class="inverted-text">Reliable IT that moves your business forward</h1>
+        <h1 class="typing">
+          <span id="typing-text"></span><span class="cursor">|</span>
+        </h1>
         <p>
           We provide end-to-end managed IT, cloud strategy & migrations, voice systems and custom development so your team can focus on growth — not firefighting.
         </p>
@@ -50,6 +48,7 @@
     </section>
 
     <section id="services" class="services">
+      <div id="particles-js"></div>
       <div class="services-inner">
         <h2 class="reveal">Our Services</h2>
 
@@ -122,7 +121,7 @@
 
 
 
-    <section id="offerings" style="margin-top:28px">
+    <!-- <section id="offerings" style="margin-top:28px">
       <h2>Core Offerings</h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:12px">
         <div class="card">
@@ -170,30 +169,32 @@
           <p class="muted">We align IT investments with your business goals and present actionable roadmaps, not vendor jargon.</p>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="contact" style="margin-top:28px">
-      <h2>Get a Free Assessment</h2>
-      <div style="display:flex;gap:18px;flex-wrap:wrap">
-        <form class="card" style="flex:1;min-width:320px" action="#" onsubmit="event.preventDefault();alert('Thanks — this demo form does not send. Replace with your form handler.')">
-          <label style="display:block;margin-bottom:8px;font-weight:700">Company</label>
-          <input style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc;margin-bottom:10px">
-          <label style="display:block;margin-bottom:8px;font-weight:700">Email</label>
-          <input style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc;margin-bottom:10px">
-          <label style="display:block;margin-bottom:8px;font-weight:700">Message</label>
-          <textarea style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc;margin-bottom:10px;height:120px"></textarea>
-          <button class="btn" type="submit">Request Assessment</button>
-        </form>
-        <div style="flex:1;min-width:280px">
-          <div class="card">
-            <h3>Contact</h3>
-            <p class="muted">Phone: (02) 8000 0000<br> Email: hello@horizon-it.com<br> Located: Sydney, Australia</p>
-            <h4 style="margin-top:12px">Quick Start</h4>
-            <ol class="muted">
-              <li>Schedule assessment</li>
-              <li>Receive a technical report & roadmap</li>
-              <li>Start migration or managed services onboarding</li>
-            </ol>
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <h2>Get a Free Assessment</h2>
+        <div class="contact-form">
+          <form class="card" style="flex:1;min-width:600px;" action="#" onsubmit="event.preventDefault();alert('Thanks — this demo form does not send. Replace with your form handler.')">
+            <label style="display:block;margin-bottom:8px;font-weight:700">Company</label>
+            <input style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc;margin-bottom:10px">
+            <label style="display:block;margin-bottom:8px;font-weight:700">Email</label>
+            <input style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc;margin-bottom:10px">
+            <label style="display:block;margin-bottom:8px;font-weight:700">Message</label>
+            <textarea style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc;margin-bottom:10px;height:120px"></textarea>
+            <button class="btn" type="submit">Request Assessment</button>
+          </form>
+          <div style="flex:1;min-width:420px">
+            <div class="card">
+              <h3>Contact</h3>
+              <p class="muted">Phone: (02) 8000 0000<br> Email: hello@horizon-it.com<br> Located: Sydney, Australia</p>
+              <h4 style="margin-top:12px">Quick Start</h4>
+              <ol class="muted">
+                <li>Schedule assessment</li>
+                <li>Receive a technical report & roadmap</li>
+                <li>Start migration or managed services onboarding</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
